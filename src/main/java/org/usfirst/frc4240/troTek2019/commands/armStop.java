@@ -43,7 +43,7 @@ public class armStop extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.arm1.stopMotor();
+        Robot.arm1PID.armStop();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -55,7 +55,6 @@ public class armStop extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
-        Robot.arm1.stopMotor();
     }
 
     // Called when another command which requires one or more of the same
