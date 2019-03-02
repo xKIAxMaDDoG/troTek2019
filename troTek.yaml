@@ -297,7 +297,7 @@ Children:
           validators: *id009
           value: '2'
         Distance Per Pulse: !!robotbuilder.data.properties.DoubleProperty {default: 1,
-          name: Distance Per Pulse, validators: null, value: 0.001}
+          name: Distance Per Pulse, validators: null, value: 0.01}
         PID Source: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id010
           default: kRate
@@ -335,7 +335,7 @@ Children:
       F: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: F, validators: null,
         value: 0.0}
       Tolerance: !!robotbuilder.data.properties.DoubleProperty {default: 0.2, name: Tolerance,
-        validators: null, value: 0.002}
+        validators: null, value: 0.9}
       Constants: !!robotbuilder.data.properties.ConstantsProperty
         default: []
         name: Constants
@@ -346,11 +346,11 @@ Children:
       Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: Minimum Input,
         validators: null, value: 0.0}
       Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
-        name: Limit Input, validators: null, value: false}
+        name: Limit Input, validators: null, value: true}
       Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
         name: Minimum Output, validators: null, value: -5.0}
       P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-        value: 0.5}
+        value: 0.9}
       Input: !!robotbuilder.data.properties.ChildSelectionProperty
         default: 0
         name: Input
