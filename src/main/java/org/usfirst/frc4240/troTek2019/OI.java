@@ -78,7 +78,6 @@ public class OI {
         
         jB3 = new JoystickButton(xboxController, 3);
         jB3.whileHeld(new arm2Up());
-        
         jB6 = new JoystickButton(xboxController, 6);
         jB6.whileHeld(new arm2Down());
         jB5 = new JoystickButton(xboxController, 5);
@@ -86,7 +85,6 @@ public class OI {
         jB4 = new JoystickButton(xboxController, 4);
         jB4.whileHeld(new armBigCargo3(0));
         jB2 = new JoystickButton(xboxController, 2);
-
         jB2.whileHeld(new armBigSecondCargoPID(0));
         jB1 = new JoystickButton(xboxController, 1);
         jB1.whileHeld(new armBigFirstCargoPID(0));
