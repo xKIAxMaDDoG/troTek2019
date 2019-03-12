@@ -378,7 +378,7 @@ Children:
       Limit Output: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Limit Output, validators: null, value: false}
       D: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: D, validators: null,
-        value: 0.0}
+        value: 0.1}
       Default command parameters: !!robotbuilder.data.properties.ParametersProperty
         default: []
         name: Default command parameters
@@ -396,15 +396,15 @@ Children:
         validators: null
         value: []
       I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
-        value: 0.0}
+        value: 0.1}
       Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: Minimum Input,
         validators: null, value: 0.0}
       Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Limit Input, validators: null, value: false}
       Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
-        name: Minimum Output, validators: null, value: -1.0}
+        name: Minimum Output, validators: null, value: 0.2}
       P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-        value: 0.5}
+        value: 0.1}
       Input: !!robotbuilder.data.properties.ChildSelectionProperty
         default: 0
         name: Input
@@ -414,7 +414,7 @@ Children:
       Send to SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Send to SmartDashboard, validators: null, value: false}
       Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: Maximum Output,
-        validators: null, value: 1.0}
+        validators: null, value: 0.2}
       Output: !!robotbuilder.data.properties.ChildSelectionProperty
         default: 0
         name: Output
@@ -977,7 +977,7 @@ Children:
     Base: Setpoint Command
     Name: armBigCargo3
   - Children: []
-    Properties: &id027
+    Properties: &id026
       Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
         name: Autonomous Selection, validators: null, value: false}
       Parameters: !!robotbuilder.data.properties.ParametersProperty
@@ -986,8 +986,7 @@ Children:
         name: Parameters
         validators: null
         value:
-        - &id025 !!robotbuilder.data.properties.ParameterDescriptor {name: setpoint,
-          type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: setpoint, type: double}
       Requires: !!robotbuilder.data.properties.ComponentSelectionProperty
         componentName: PID Subsystem
         default: None
@@ -1024,7 +1023,7 @@ Children:
         name: Commands
         validators: [List]
         value:
-        - &id028 !!robotbuilder.data.CommandGroupEntry
+        - &id027 !!robotbuilder.data.CommandGroupEntry
           command:
             base:
               help: A command specifies an action that the robot can perform.
@@ -1070,7 +1069,7 @@ Children:
                 componentName: PID Subsystem
                 default: None
                 name: Requires
-                validators: [TypeDropdownSelected]
+                validators: *id022
                 value: None
               - !!robotbuilder.data.properties.BooleanProperty {default: true, name: Button on SmartDashboard,
                 validators: null, value: true}
@@ -1079,18 +1078,18 @@ Children:
                 name: Parameters
                 validators: null
                 value:
-                - *id025
+                - *id021
               - !!robotbuilder.data.properties.ParameterSetProperty
-                default: &id026 []
+                default: &id025 []
                 name: Parameter presets
                 validators: null
-                value: *id026
+                value: *id025
               - !!robotbuilder.data.properties.BooleanProperty {default: false, name: Autonomous Selection,
                 validators: null, value: false}
               supports: {}
               type: Command
             name: arm2StopPID
-            properties: *id027
+            properties: *id026
           hasMatch: true
           order: Sequential
           parameters:
@@ -1100,7 +1099,7 @@ Children:
             value:
             - !!robotbuilder.data.properties.ValuedParameterDescriptor {name: setpoint,
               type: double, value: '0'}
-          previous: *id028
+          previous: *id027
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
     Base: Command Group
