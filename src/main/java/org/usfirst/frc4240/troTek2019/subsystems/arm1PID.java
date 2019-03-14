@@ -50,7 +50,7 @@ public class arm1PID extends PIDSubsystem {
     public static final double 
     TOP = 1.68,
     MIDDLE = 1.3,
-    BOTTOM = .36,
+    BOTTOM = 1,
     STOW = .01;
     // Initialize your subsystem here
 

@@ -122,7 +122,7 @@ public class Robot extends TimedRobot {
         SmartDashboard.putBoolean("Arm 1 Direction", Robot.arm1PID.getDirection());
 
         //Arm2
-       // SmartDashboard.putNumber("Arm 2 Distance", Robot.arm2.getDistance());
+        //SmartDashboard.putNumber("Arm 2 Distance", Robot.arm2.getDistance());
         //SmartDashboard.putNumber("Arm 2 Rate", Robot.arm2.getRate());
         //SmartDashboard.putBoolean("Arm 2 Direction", Robot.arm2.getDirection());
     }
